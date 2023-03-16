@@ -247,7 +247,7 @@
   </keybind>
 
   <!-- Keybindings for window switching -->
-  <keybind key="A-Tab">
+  <keybind key="W-w">
     <action name="NextWindow">
       <finalactions>
         <action name="Focus"/>
@@ -766,6 +766,7 @@
   # end of the example
 -->
 <application class="*">
+<decor>no</decor>
 <maximized>yes</maximized>
 </application>
 </applications>
