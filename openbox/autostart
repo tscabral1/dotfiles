@@ -19,3 +19,4 @@
 
 #Start tint2 bar
 tint2 &
+feh --bg-scale ~/.config/wallpapers/cat-sound.png
