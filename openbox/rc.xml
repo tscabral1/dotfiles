@@ -203,27 +203,27 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <keybind key="W-S-1">
       <action name="SendToDesktop">
-        <to>left</to>
+        <to>1</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="W-S-2">
       <action name="SendToDesktop">
-        <to>right</to>
+        <to>2</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
+    <keybind key="W-S-3">
       <action name="SendToDesktop">
-        <to>up</to>
+        <to>3</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Down">
+    <keybind key="W-S-4">
       <action name="SendToDesktop">
-        <to>down</to>
+        <to>4</to>
         <wrap>no</wrap>
       </action>
     </keybind>
