@@ -21,4 +21,7 @@
 tint2 &
 
 #Start feh and set wallpaper
-feh --bg-scale ~/.config/wallpapers/cat-sound.png &
+feh --bg-scale ~/.config/wallpapers/cat-waves.png &
+
+#Start keypad
+numlockx &
