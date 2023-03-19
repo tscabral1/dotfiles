@@ -298,16 +298,27 @@
     </action>
   </keybind>
 
-  <!-- Keybindings for running applications -->
-  <keybind key="W-e">
+  <!-- Keybindings for system commands -->
+  <keybind key="A-F4">
     <action name="Execute">
       <startupnotify>
         <enabled>true</enabled>
-        <name>Konqueror</name>
+        <name>Shut down openbox</name>
       </startupnotify>
-      <command>kfmclient openProfile filemanagement</command>
+      <command>shutdown now</command>
     </action>
   </keybind>
+  <keybind key="A-F5">
+    <action name="Execute">
+      <startupnotify>
+        <enabled>true</enabled>
+        <name>Reboot openbox</name>
+      </startupnotify>
+      <command>reboot</command>
+    </action>
+  </keybind>
+
+  <!-- Keybindings for running applications -->
   <keybind key="W-z">
     <action name="Execute">
       <startupnotify>
