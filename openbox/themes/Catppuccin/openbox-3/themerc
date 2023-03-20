@@ -157,8 +157,8 @@ osd.inactive.label.text.color: #ffffff
 
 !# yeah whatever, this is fine anyhoo?
 osd.hilight.bg: flat vertical gradient 
-osd.hilight.bg.color: #cba6f7
-osd.hilight.bg.colorTo: #cba6f7
+osd.hilight.bg.color: #ffffff
+osd.hilight.bg.colorTo: #ffffff
 osd.unhilight.bg: flat vertical gradient
 osd.unhilight.bg.color: #cba6f7
 osd.unhilight.bg.colorTo: #cba6f7
