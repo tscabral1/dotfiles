@@ -255,10 +255,10 @@
       <action name="Close"/>
     </keybind>
     <keybind key="W-u">
-      <action name="Unmaximize" />
+      <action name="Unmaximize"/>
     </keybind>
     <keybind key="W-m">
-      <action name="Maximize" />
+      <action name="Maximize"/>
     </keybind>
     <keybind key="A-Escape">
       <action name="Lower"/>
@@ -340,45 +340,56 @@
         <command>reboot</command>
       </action>
     </keybind>
-
-  <!-- Keybindings for tiling windows-->
-  <keybind key="W-h">
-    <action name="Unmaximize" />
-    <action name="MoveResizeTo">
-      <x>0</x>
-      <y>0</y>
-      <width>50%</width>
-      <height>100%</height>
-    </action>
-  </keybind>
-  <keybind key="W-l">
-    <action name="Unmaximize" />
-    <action name="MoveResizeTo">
-      <x>-0</x>
-      <y>0</y>
-      <width>50%</width>
-      <height>100%</height>
-    </action>
-  </keybind>
-  <keybind key="W-j">
-    <action name="Unmaximize" />
-    <action name="MoveResizeTo">
-      <x>0</x>
-      <y>0</y>
-      <width>100%</width>
-      <height>50%</height>
-    </action>
-  </keybind>
-  <keybind key="W-k">
-    <action name="Unmaximize" />
-    <action name="MoveResizeTo">
-      <x>0</x>
-      <y>-0</y>
-      <width>100%</width>
-      <height>50%</height>
-    </action>
-  </keybind>
-
+    <!-- Keybindings for tiling windows-->
+    <keybind key="W-h">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-k">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-j">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <!-- Resize window -->
+    <keybind key="W-A-l">
+      <action name="GrowToEdgeEast"/>
+    </keybind>
+    <keybind key="W-A-h">
+      <action name="GrowToEdgeWest"/>
+    </keybind>
+    <keybind key="W-A-j">
+      <action name="GrowToEdgeSouth"/>
+    </keybind>
+    <keybind key="W-A-k">
+      <action name="GrowToEdgeNorth"/>
+    </keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-z">
       <action name="Execute">
@@ -864,6 +875,8 @@
 -->
     <application class="*">
       <decor>no</decor>
+    </application>
+    <application class="Alacritty">
       <maximized>yes</maximized>
     </application>
   </applications>
