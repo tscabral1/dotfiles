@@ -8,4 +8,6 @@
 
 ## Firefox theme
 
+Log into: https://addons.mozilla.org
+Download:
 https://addons.mozilla.org/firefox/downloads/file/4084240/40d0f4ca6aa84191b226-4.0.xpi
