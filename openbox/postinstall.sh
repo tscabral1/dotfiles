@@ -41,4 +41,7 @@ cd libinput-gestures;
 sudo ./libinput-gestures-setup install;
 cd;
 sudo rm -r libinput-gestures;
-sudo gpasswd -a $USER input
+sudo gpasswd -a $USER input;
+
+#Delete install and postinstall scripts
+sudo rm -r install.sh postinstall.sh
