@@ -25,3 +25,6 @@ feh --bg-scale ~/.config/wallpapers/cat-waves.png &
 
 #Start keypad
 numlockx &
+
+#Start trackpad gestures
+libinput-gestures-setup autostart start &
