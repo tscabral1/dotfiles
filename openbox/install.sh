@@ -130,6 +130,8 @@ cd $HOME/.config/gtk-3.0;
 sudo wget -O settings.ini https://raw.githubusercontent.com/tscabral1/dotfiles/main/gtk-3.0/settings.ini;
 cd $HOME/.config/gtk-2.0;
 sudo wget -O gtkfilechooser.ini https://raw.githubusercontent.com/tscabral1/dotfiles/main/gtk-2.0/gtkfilechooser.ini;
+cd $HOME/.config;
+sudo wget -O libinput-gestures.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/libinput-gestures.conf;
 
 
 #Run postinstall.sh
