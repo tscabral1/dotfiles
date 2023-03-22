@@ -133,5 +133,5 @@ sudo wget -O gtkfilechooser.ini https://raw.githubusercontent.com/tscabral1/dotf
 
 
 #Run postinstall.sh
-wget https://raw.githubusercontent.com/tscabral1/install/main/postinstall.sh;
+wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh;
 sudo bash postinstall.sh
