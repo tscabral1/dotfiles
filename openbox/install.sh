@@ -115,6 +115,7 @@ cd $HOME/.config/tint2;
 sudo wget -O tint2rc https://raw.githubusercontent.com/tscabral1/dotfiles/main/tint2/tint2rc;
 cd executors;
 sudo wget -O volume https://raw.githubusercontent.com/tscabral1/dotfiles/main/tint2/executors/volume;
+sudo chmod 777 volume;
 cd icons;
 sudo wget -O audio-volume-high.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-high.svg;
 sudo wget -O audio-volume-low.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-low.svg;
