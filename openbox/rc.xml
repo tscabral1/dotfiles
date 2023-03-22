@@ -367,6 +367,15 @@
         <command>pactl set-sink-mute 0 toggle</command>
       </action>
     </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>TurnOffScreen</name>
+        </startupnotify>
+        <command>xset dpms force off</command>
+      </action>
+    </keybind>
     <!-- Keybindings for tiling windows-->
     <keybind key="W-h">
       <action name="Unmaximize"/>
