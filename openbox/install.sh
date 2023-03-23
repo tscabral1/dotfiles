@@ -136,5 +136,6 @@ sudo wget -O libinput-gestures.conf https://raw.githubusercontent.com/tscabral1/
 
 
 #Run postinstall.sh
+cd $HOME;
 wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh;
 sudo bash postinstall.sh
