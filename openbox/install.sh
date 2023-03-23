@@ -10,7 +10,7 @@
 sudo pacman -Syy;
 
 #Install main Openbox files and additional apps
-sudo pacman -S openbox xorg-server xorg-xinit xorg-xset alsa-utils pulseaudio-bluetooth bluez bluez-utils blueman git vim alacritty obconf lxappearance-obconf menumaker tint2 firefox pcmanfm zip unzip xarchiver feh udisks2 udiskie numlockx wmctrl xdotool;
+sudo pacman -S openbox xorg-server xorg-xinit xorg-xset alsa-utils pulseaudio-bluetooth bluez bluez-utils blueman git vim kitty obconf lxappearance-obconf menumaker tint2 firefox pcmanfm zip unzip xarchiver feh udisks2 udiskie numlockx wmctrl xdotool;
 
 #Install yay
 cd $HOME;
@@ -22,6 +22,7 @@ sudo rm -r yay;
 
 #Install apps from AUR
 yay -S orage;
+yay -S ttf-fira-code;
 
 #Change Grub timeout to 0
 sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub;
@@ -107,6 +108,7 @@ sudo mkdir -p orage;
 sudo mkdir -p openbox;
 sudo mkdir -p gtk-3.0;
 sudo mkdir -p gtk-2.0;
+sudo mkdir -p kitty;
 
 #Download config files
 cd wallpapers;
@@ -133,6 +135,8 @@ cd $HOME/.config/gtk-2.0;
 sudo wget -O gtkfilechooser.ini https://raw.githubusercontent.com/tscabral1/dotfiles/main/gtk-2.0/gtkfilechooser.ini;
 cd $HOME/.config;
 sudo wget -O libinput-gestures.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/libinput-gestures.conf;
+cd $HOME/.config/kitty;
+sudo wget -O kitty.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/kitty/kitty.conf;
 cd $HOME;
 sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
 
