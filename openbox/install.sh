@@ -133,6 +133,8 @@ cd $HOME/.config/gtk-2.0;
 sudo wget -O gtkfilechooser.ini https://raw.githubusercontent.com/tscabral1/dotfiles/main/gtk-2.0/gtkfilechooser.ini;
 cd $HOME/.config;
 sudo wget -O libinput-gestures.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/libinput-gestures.conf;
+cd $HOME;
+sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
 
 
 #Run postinstall.sh
