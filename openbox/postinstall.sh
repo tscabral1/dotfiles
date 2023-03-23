@@ -44,4 +44,5 @@ sudo rm -r libinput-gestures;
 sudo gpasswd -a $USER input;
 
 #Delete install and postinstall scripts
+cd;
 sudo rm -r install.sh postinstall.sh
