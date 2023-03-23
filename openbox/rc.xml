@@ -54,7 +54,7 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>yes</keepBorder>
+    <keepBorder>no</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
@@ -440,9 +440,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Alacritty</name>
+          <name>Kitty</name>
         </startupnotify>
-        <command>alacritty</command>
+        <command>kitty</command>
       </action>
     </keybind>
     <keybind key="W-c">
