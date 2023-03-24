@@ -43,8 +43,4 @@ cd;
 sudo rm -r libinput-gestures;
 sudo gpasswd -a $USER input;
 newgrp input;
-libinput-gestures-setup desktop autostart start status;
-
-#Delete install and postinstall scripts
-cd $HOME;
-sudo rm -r install.sh postinstall.sh
+libinput-gestures-setup desktop autostart start status
