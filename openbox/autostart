@@ -28,3 +28,6 @@ numlockx &
 
 #Start trackpad gestures
 libinput-gestures-setup autostart start &
+
+#Start udiskie
+udiskie -f kitty &
