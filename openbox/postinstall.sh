@@ -24,15 +24,15 @@ ExecStart=-/sbin/agetty --autologin thiago --noclear %I 38400 linux' > /etc/syst
 
 #Install theme
 cd /usr/share/themes;
-sudo wget https://github.com/tscabral1/dotfiles/releases/download/catppuccin-theme-openbox/catppuccin-theme.tar;
-sudo tar xfv catppuccin-theme.tar;
-sudo rm -r catppuccin-theme.tar;
+sudo wget https://github.com/tscabral1/dotfiles/releases/download/catppuccin-theme-openbox/catppuccin-theme.tar.gz;
+sudo tar -xzvf catppuccin-theme.tar.gz;
+sudo rm -r catppuccin-theme.tar.gz;
 
 #Install icon set
 cd /usr/share/icons;
-sudo wget https://github.com/tscabral1/dotfiles/releases/download/catppuccin-papirus-icons-openbox/catppuccin-papirus-icons.tar;
-sudo tar xfv catppuccin-papirus-icons.tar;
-sudo rm -r catppuccin-papirus-icons.tar;
+sudo wget https://github.com/tscabral1/dotfiles/releases/download/catppuccin-papirus-icons-openbox/catppuccin-papirus-icons.tar.gz;
+sudo tar -xzvf catppuccin-papirus-icons.tar.gz;
+sudo rm -r catppuccin-papirus-icons.tar.gz;
 
 #Install trackpad gestures
 cd;
