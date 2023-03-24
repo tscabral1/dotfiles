@@ -1,1 +1,1 @@
-echo "hello"
+sudo pacman -Syu
