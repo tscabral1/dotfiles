@@ -138,7 +138,7 @@ sudo wget -O libinput-gestures.conf https://raw.githubusercontent.com/tscabral1/
 cd $HOME/.config/kitty;
 sudo wget -O kitty.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/kitty/kitty.conf;
 cd $HOME;
-sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
+sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0 &&
 
 
 #Run postinstall.sh
