@@ -142,6 +142,4 @@ sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/mai
 
 
 #Run postinstall.sh
-cd $HOME;
-wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh;
-sudo bash postinstall.sh
+sudo wget -O - https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh | bash
