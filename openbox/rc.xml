@@ -376,6 +376,15 @@
         <command>xset dpms force off</command>
       </action>
     </keybind>
+    <keybind key="W-y">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Update Arch</name>
+        </startupnotify>
+        <command>kitty sudo pacman -Syu</command>
+      </action>
+    </keybind>
     <!-- Keybindings for tiling windows-->
     <keybind key="W-h">
       <action name="Unmaximize"/>
