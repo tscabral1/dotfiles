@@ -449,6 +449,15 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
+          <name>Ranger</name>
+        </startupnotify>
+        <command>kitty ranger</command>
+      </action>
+    </keybind>
+    <keybind key="W-v">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
           <name>Pcmanfm</name>
         </startupnotify>
         <command>pcmanfm</command>
