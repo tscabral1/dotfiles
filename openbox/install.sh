@@ -109,6 +109,8 @@ sudo mkdir -p openbox;
 sudo mkdir -p gtk-3.0;
 sudo mkdir -p gtk-2.0;
 sudo mkdir -p kitty;
+sudo mkdir -p ranger/colorschemes/;
+sudo mkdir -p ranger/plugins/ranger_devicons/__pycache__/;
 
 #Download config files
 cd wallpapers;
@@ -137,6 +139,16 @@ cd $HOME/.config;
 sudo wget -O libinput-gestures.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/libinput-gestures.conf;
 cd $HOME/.config/kitty;
 sudo wget -O kitty.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/kitty/kitty.conf;
+cd $HOME/.config/ranger/plugins/ranger_devicons/__pycache__;
+sudo wget -O __init__.cpython-310.opt-1.pyc https://github.com/tscabral1/dotfiles/blob/main/ranger/plugins/ranger_devicons/__pycache__/__init__.cpython-310.opt-1.pyc;
+sudo wget -O devicons.cpython-310.opt-1.pyc https://github.com/tscabral1/dotfiles/blob/main/ranger/plugins/ranger_devicons/__pycache__/devicons.cpython-310.opt-1.pyc;
+cd $HOME/.config/ranger/plugins/ranger_devicons;
+sudo wget -O __init__.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/plugins/ranger_devicons/__init__.py;
+sudo wget -O devicons.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/plugins/ranger_devicons/devicons.py;
+cd $HOME/.config/ranger/colorschemes;
+sudo wget -O default.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/colorschemes/default.py;
+cd $HOME/.config/ranger;
+sudo wget -O rc.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rc.conf;
 cd $HOME;
 sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0 &&
 
