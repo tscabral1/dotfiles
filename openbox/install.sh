@@ -149,6 +149,7 @@ cd $HOME/.config/ranger/colorschemes;
 sudo wget -O default.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/colorschemes/default.py;
 cd $HOME/.config/ranger;
 sudo wget -O rc.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rc.conf;
+sudo wget -O rifle.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rifle.conf;
 cd $HOME;
 sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0 &&
 
