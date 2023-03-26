@@ -60,7 +60,7 @@ class Default(ColorScheme):
                 else:
                     fg = magenta
             if context.border:
-                fg = 189
+                fg = 183
 
         elif context.in_titlebar:
             if context.hostname:
