@@ -26,7 +26,6 @@ class Default(ColorScheme):
             if context.container:
                 fg = 9
             if context.directory:
-                attr |= bold
                 fg = 183
             elif context.executable and not \
                     any((context.media, context.container,
