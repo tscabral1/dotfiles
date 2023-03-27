@@ -23,6 +23,7 @@ sudo rm -r yay;
 #Install apps from AUR
 yay -S orage;
 yay -S ttf-fira-code;
+yay -S blesh;
 
 #Change Grub timeout to 0
 sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub;
