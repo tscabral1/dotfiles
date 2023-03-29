@@ -387,7 +387,17 @@
         </startupnotify>
         <command>kitty sudo pacman -Syu</command>
       </action>
+      </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <startupnotify>
+	  <enabled>true</enabled>
+	  <name>Screenshot</name>
+        </startupnotify>
+	<command>scrot -s -e 'xclip -selection clipboard -t image/png -i $f'</command>
+      </action>
     </keybind>
+
     <!-- Keybindings for tiling windows-->
     <keybind key="W-h">
       <action name="Unmaximize"/>
