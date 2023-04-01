@@ -160,7 +160,7 @@ cd $HOME/.config/nvim/lua/custom/themes;
 sudo wget -O catppuccin-mocha.lua https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua;
 cd $HOME;
 sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
-sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.bashrc &&
+sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.bashrc;
 
 
 #Run postinstall.sh
