@@ -10,7 +10,7 @@
 sudo pacman -Syy;
 
 #Install main Openbox files and additional apps
-sudo pacman -S openbox xorg-server xorg-xinit xorg-xset xclip alsa-utils pulseaudio-bluetooth bluez bluez-utils blueman git vim kitty obconf lxappearance-obconf menumaker tint2 firefox pcmanfm ranger zip unzip xarchiver feh udisks2 udiskie numlockx wmctrl xdotool python-pillow;
+sudo pacman -S openbox xorg-server xorg-xinit xorg-xset xclip alsa-utils pulseaudio-bluetooth bluez bluez-utils blueman git vim neovim kitty obconf lxappearance-obconf menumaker tint2 firefox pcmanfm ranger zip unzip xarchiver feh udisks2 udiskie numlockx wmctrl xdotool python-pillow;
 
 #Install yay
 cd $HOME;
@@ -102,6 +102,9 @@ if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 logout
 fi' > ~/.bash_profile;
 
+#Apply Nvchad to Neovim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
+
 #Create config folders
 cd $HOME/.config;
 sudo mkdir -p wallpapers;
@@ -113,6 +116,7 @@ sudo mkdir -p gtk-2.0;
 sudo mkdir -p kitty;
 sudo mkdir -p ranger/colorschemes/;
 sudo mkdir -p ranger/plugins/ranger_devicons/__pycache__/;
+sudo mkdir -p nvim/lua/custom/themes;
 
 #Download config files
 cd wallpapers;
@@ -152,6 +156,8 @@ sudo wget -O default.py https://raw.githubusercontent.com/tscabral1/dotfiles/mai
 cd $HOME/.config/ranger;
 sudo wget -O rc.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rc.conf;
 sudo wget -O rifle.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rifle.conf;
+cd $HOME/.config/nvim/lua/custom/themes;
+sudo wget -O catppuccin-mocha.lua https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua;
 cd $HOME;
 sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
 sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.bashrc &&
