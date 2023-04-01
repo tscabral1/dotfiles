@@ -7,24 +7,24 @@
 ###############################################
 
 #Update system
-sudo pacman -Syy;
+sudo pacman -Syy &&
 
 #Install main Openbox files and additional apps
-sudo pacman -S openbox xorg-server xorg-xinit xorg-xset xclip alsa-utils pulseaudio-bluetooth bluez bluez-utils blueman git vim neovim kitty obconf lxappearance-obconf menumaker tint2 firefox pcmanfm ranger zip unzip xarchiver feh udisks2 udiskie numlockx wmctrl xdotool python-pillow;
+sudo pacman -S openbox xorg-server xorg-xinit xorg-xset xclip alsa-utils pulseaudio-bluetooth bluez bluez-utils blueman git vim neovim kitty obconf lxappearance-obconf menumaker tint2 firefox pcmanfm ranger zip unzip xarchiver feh udisks2 udiskie numlockx wmctrl xdotool python-pillow &&
 
 #Install yay
-cd $HOME;
-git clone https://aur.archlinux.org/yay.git;
-cd yay;
-makepkg -si;
-cd $HOME/;
-sudo rm -r yay;
+cd $HOME &&
+git clone https://aur.archlinux.org/yay.git &&
+cd yay &&
+makepkg -si &&
+cd $HOME/ &&
+sudo rm -r yay &&
 
 #Install apps from AUR
-yay -S orage;
-yay -S ttf-fira-code;
-yay -S blesh;
-yay -S escrotum-git;
+yay -S orage &&
+yay -S ttf-fira-code &&
+yay -S blesh &&
+yay -S escrotum-git &&
 
 #Change Grub timeout to 0
 sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub;
