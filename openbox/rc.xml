@@ -394,7 +394,7 @@
 	  <enabled>true</enabled>
 	  <name>Screenshot</name>
         </startupnotify>
-	<command>scrot -s -e 'xclip -selection clipboard -t image/png -i $f'</command>
+	<command>escrotum -s -C 'xclip -selection clipboard -t image/png -i $f'</command>
       </action>
     </keybind>
 
