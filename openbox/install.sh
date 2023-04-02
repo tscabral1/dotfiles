@@ -36,7 +36,7 @@ sudo systemctl enable bluetooth.service;
 #Reconfigure Openbox menu
 cd $HOME/.config/ &&
 sudo mkdir -p openbox &&
-cd $HOME/.config/Openbox/ &&
+cd $HOME/.config/openbox/ &&
 sudo touch menu.xml &&
 sudo chmod 777 menu.xml &&
 cd &&
