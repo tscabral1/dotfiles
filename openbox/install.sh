@@ -34,6 +34,10 @@ sudo sed -i 's/#AutoEnable=true/AutoEnable=true/g' /etc/bluetooth/main.conf;
 sudo systemctl enable bluetooth.service;
 
 #Reconfigure Openbox menu
+cd $HOME/.config/openbox &&
+sudo touch menu.xml &&
+sudo chmod 777 menu.xml &&
+cd &&
 mmaker -vf OpenBox3;
 
 #Create .xinitrc
