@@ -160,6 +160,17 @@ sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/mai
 sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.bashrc;
 sudo chmod -R 777 $HOME/.config;
 
+#Install trackpad gestures
+cd;
+git clone https://github.com/bulletmark/libinput-gestures.git;
+cd libinput-gestures;
+sudo ./libinput-gestures-setup install;
+cd;
+sudo rm -r libinput-gestures;
+sudo gpasswd -a $USER input;
+newgrp input;
+libinput-gestures-setup desktop autostart start status;
+
 #Run postinstall.sh
 wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh;
 sudo bash postinstall.sh
