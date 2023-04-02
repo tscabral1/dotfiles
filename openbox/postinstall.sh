@@ -32,4 +32,9 @@ sudo rm -r catppuccin-theme.tar.gz;
 cd /usr/share/icons;
 sudo wget https://github.com/tscabral1/dotfiles/releases/download/catppuccin-papirus-icons-openbox/catppuccin-papirus-icons.tar.gz;
 sudo tar -xzvf catppuccin-papirus-icons.tar.gz;
-sudo rm -r catppuccin-papirus-icons.tar.gz
+sudo rm -r catppuccin-papirus-icons.tar.gz;
+
+#Run postinstall2.sh
+cd;
+wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall2.sh;
+bash postinstall2.sh
