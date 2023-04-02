@@ -13,4 +13,4 @@ Download:
 https://addons.mozilla.org/firefox/downloads/file/4088983/40d0f4ca6aa84191b226-5.0.xpi
 
 ## Neovim/Nvchad theme
-<leader key> th
+leader key + th
