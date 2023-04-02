@@ -117,7 +117,6 @@ sudo mkdir -p gtk-2.0;
 sudo mkdir -p kitty;
 sudo mkdir -p ranger/colorschemes/;
 sudo mkdir -p ranger/plugins/ranger_devicons/__pycache__/;
-sudo mkdir -p nvim/lua/custom/themes;
 
 #Download config files
 cd wallpapers;
@@ -157,8 +156,6 @@ sudo wget -O default.py https://raw.githubusercontent.com/tscabral1/dotfiles/mai
 cd $HOME/.config/ranger;
 sudo wget -O rc.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rc.conf;
 sudo wget -O rifle.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rifle.conf;
-cd $HOME/.config/nvim/lua/custom/themes;
-sudo wget -O catppuccin-mocha.lua https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua;
 cd $HOME;
 sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
 sudo chmod -R 777 $HOME/.config;
