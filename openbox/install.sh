@@ -7,35 +7,35 @@
 ###############################################
 
 #Update system
-sudo pacman -Syy &&
+sudo pacman -Syy;
 
 #Install main Openbox files and additional apps
-sudo pacman -S openbox xorg-server xorg-xinit xorg-xset xclip alsa-utils pulseaudio-bluetooth bluez bluez-utils blueman git vim neovim kitty obconf lxappearance-obconf menumaker tint2 firefox pcmanfm ranger zip unzip xarchiver feh udisks2 udiskie numlockx wmctrl xdotool python-pillow &&
+sudo pacman -S openbox xorg-server xorg-xinit xorg-xset xclip alsa-utils pulseaudio-bluetooth bluez bluez-utils blueman git vim neovim kitty obconf lxappearance-obconf menumaker tint2 firefox pcmanfm ranger zip unzip xarchiver feh udisks2 udiskie numlockx wmctrl xdotool python-pillow;
 
 #Install yay
-cd $HOME &&
-git clone https://aur.archlinux.org/yay.git &&
-cd yay &&
-makepkg -si &&
-cd $HOME/ &&
-sudo rm -r yay &&
+cd $HOME;
+git clone https://aur.archlinux.org/yay.git;
+cd yay;
+makepkg -si;
+cd $HOME/;
+sudo rm -r yay;
 
 #Install apps from AUR
-yay -S orage &&
-yay -S ttf-fira-code &&
-yay -S blesh &&
-yay -S escrotum-git &&
+yay -S orage;
+yay -S ttf-fira-code;
+yay -S blesh;
+yay -S escrotum-git;
 
 #Change Grub timeout to 0
-sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub &&
-sudo grub-mkconfig -o /boot/grub/grub.cfg &&
+sudo sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub;
+sudo grub-mkconfig -o /boot/grub/grub.cfg;
 
 #Configure bluetooth
-sudo sed -i 's/#AutoEnable=true/AutoEnable=true/g' /etc/bluetooth/main.conf &&
-sudo systemctl enable bluetooth.service &&
+sudo sed -i 's/#AutoEnable=true/AutoEnable=true/g' /etc/bluetooth/main.conf;
+sudo systemctl enable bluetooth.service;
 
 #Reconfigure Openbox menu
-mmaker -vf OpenBox3 &&
+mmaker -vf OpenBox3;
 
 #Create .xinitrc
 echo '#!/bin/sh
@@ -100,68 +100,69 @@ echo '#
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 . startx
 logout
-fi' > ~/.bash_profile &&
+fi' > ~/.bash_profile;
 
 #Apply Nvchad to Neovim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim &&
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
 
 #Create config folders
-cd $HOME/.config &&
-sudo mkdir -p wallpapers &&
-sudo mkdir -p tint2/executors/icons/ &&
-sudo mkdir -p orage &&
-sudo mkdir -p openbox &&
-sudo mkdir -p gtk-3.0 &&
-sudo mkdir -p gtk-2.0 &&
-sudo mkdir -p kitty &&
-sudo mkdir -p ranger/colorschemes/ &&
-sudo mkdir -p ranger/plugins/ranger_devicons/__pycache__/ &&
-sudo mkdir -p nvim/lua/custom/themes &&
+cd $HOME/.config;
+sudo mkdir -p wallpapers;
+sudo mkdir -p tint2/executors/icons/;
+sudo mkdir -p orage;
+sudo mkdir -p openbox;
+sudo mkdir -p gtk-3.0;
+sudo mkdir -p gtk-2.0;
+sudo mkdir -p kitty;
+sudo mkdir -p ranger/colorschemes/;
+sudo mkdir -p ranger/plugins/ranger_devicons/__pycache__/;
+sudo mkdir -p nvim/lua/custom/themes;
 
 #Download config files
-cd wallpapers &&
-sudo wget -O cat-waves.png https://raw.githubusercontent.com/tscabral1/dotfiles/main/wallpapers/cat-waves.png &&
-cd $HOME/.config/tint2 &&
-sudo wget -O tint2rc https://raw.githubusercontent.com/tscabral1/dotfiles/main/tint2/tint2rc &&
-cd executors &&
-sudo wget -O volume https://raw.githubusercontent.com/tscabral1/dotfiles/main/tint2/executors/volume &&
-sudo chmod 777 volume &&
-cd icons &&
-sudo wget -O audio-volume-high.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-high.svg &&
-sudo wget -O audio-volume-low.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-low.svg &&
-sudo wget -O audio-volume-medium.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-medium.svg &&
-sudo wget -O audio-volume-muted.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-muted.svg &&
-sudo wget -O battery.png https://raw.githubusercontent.com/tscabral1/dotfiles/main/tint2/executors/icons/battery.png &&
-cd $HOME/.config/orage &&
-sudo wget -O oragerc https://raw.githubusercontent.com/tscabral1/dotfiles/main/orage/oragerc &&
-cd $HOME/.config/openbox &&
-sudo wget -O autostart https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/autostart &&
-sudo wget -O rc.xml https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/rc.xml &&
-cd $HOME/.config/gtk-3.0 &&
-sudo wget -O settings.ini https://raw.githubusercontent.com/tscabral1/dotfiles/main/gtk-3.0/settings.ini &&
-cd $HOME/.config/gtk-2.0 &&
-sudo wget -O gtkfilechooser.ini https://raw.githubusercontent.com/tscabral1/dotfiles/main/gtk-2.0/gtkfilechooser.ini &&
-cd $HOME/.config &&
-sudo wget -O libinput-gestures.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/libinput-gestures.conf &&
-cd $HOME/.config/kitty &&
-sudo wget -O kitty.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/kitty/kitty.conf &&
-cd $HOME/.config/ranger/plugins/ranger_devicons/__pycache__ &&
-sudo wget -O __init__.cpython-310.opt-1.pyc https://github.com/tscabral1/dotfiles/blob/main/ranger/plugins/ranger_devicons/__pycache__/__init__.cpython-310.opt-1.pyc &&
-sudo wget -O devicons.cpython-310.opt-1.pyc https://github.com/tscabral1/dotfiles/blob/main/ranger/plugins/ranger_devicons/__pycache__/devicons.cpython-310.opt-1.pyc &&
-cd $HOME/.config/ranger/plugins/ranger_devicons &&
-sudo wget -O __init__.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/plugins/ranger_devicons/__init__.py &&
-sudo wget -O devicons.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/plugins/ranger_devicons/devicons.py &&
-cd $HOME/.config/ranger/colorschemes &&
-sudo wget -O default.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/colorschemes/default.py &&
-cd $HOME/.config/ranger &&
-sudo wget -O rc.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rc.conf &&
-sudo wget -O rifle.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rifle.conf &&
-cd $HOME/.config/nvim/lua/custom/themes &&
-sudo wget -O catppuccin-mocha.lua https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua &&
-cd $HOME &&
-sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0 &&
-sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.bashrc &&
+cd wallpapers;
+sudo wget -O cat-waves.png https://raw.githubusercontent.com/tscabral1/dotfiles/main/wallpapers/cat-waves.png;
+cd $HOME/.config/tint2;
+sudo wget -O tint2rc https://raw.githubusercontent.com/tscabral1/dotfiles/main/tint2/tint2rc;
+cd executors;
+sudo wget -O volume https://raw.githubusercontent.com/tscabral1/dotfiles/main/tint2/executors/volume;
+sudo chmod 777 volume;
+cd icons;
+sudo wget -O audio-volume-high.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-high.svg;
+sudo wget -O audio-volume-low.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-low.svg;
+sudo wget -O audio-volume-medium.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-medium.svg;
+sudo wget -O audio-volume-muted.svg https://raw.githubusercontent.com/tscabral1/dotfiles/0a0d4b1f74df83ba8fd501f7111cf79b4307375d/tint2/executors/icons/audio-volume-muted.svg;
+sudo wget -O battery.png https://raw.githubusercontent.com/tscabral1/dotfiles/main/tint2/executors/icons/battery.png;
+cd $HOME/.config/orage;
+sudo wget -O oragerc https://raw.githubusercontent.com/tscabral1/dotfiles/main/orage/oragerc;
+cd $HOME/.config/openbox;
+sudo wget -O autostart https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/autostart;
+sudo wget -O rc.xml https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/rc.xml;
+cd $HOME/.config/gtk-3.0;
+sudo wget -O settings.ini https://raw.githubusercontent.com/tscabral1/dotfiles/main/gtk-3.0/settings.ini;
+cd $HOME/.config/gtk-2.0;
+sudo wget -O gtkfilechooser.ini https://raw.githubusercontent.com/tscabral1/dotfiles/main/gtk-2.0/gtkfilechooser.ini;
+cd $HOME/.config;
+sudo wget -O libinput-gestures.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/libinput-gestures.conf;
+cd $HOME/.config/kitty;
+sudo wget -O kitty.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/kitty/kitty.conf;
+cd $HOME/.config/ranger/plugins/ranger_devicons/__pycache__;
+sudo wget -O __init__.cpython-310.opt-1.pyc https://github.com/tscabral1/dotfiles/blob/main/ranger/plugins/ranger_devicons/__pycache__/__init__.cpython-310.opt-1.pyc;
+sudo wget -O devicons.cpython-310.opt-1.pyc https://github.com/tscabral1/dotfiles/blob/main/ranger/plugins/ranger_devicons/__pycache__/devicons.cpython-310.opt-1.pyc;
+cd $HOME/.config/ranger/plugins/ranger_devicons;
+sudo wget -O __init__.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/plugins/ranger_devicons/__init__.py;
+sudo wget -O devicons.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/plugins/ranger_devicons/devicons.py;
+cd $HOME/.config/ranger/colorschemes;
+sudo wget -O default.py https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/colorschemes/default.py;
+cd $HOME/.config/ranger;
+sudo wget -O rc.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rc.conf;
+sudo wget -O rifle.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rifle.conf;
+cd $HOME/.config/nvim/lua/custom/themes;
+sudo wget -O catppuccin-mocha.lua https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua;
+cd $HOME;
+sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
+sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.bashrc;
 
 
 #Run postinstall.sh
-sudo wget -O - https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh | bash
+sudo wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh;
+sudo bash postinstall.sh
