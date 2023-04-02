@@ -23,7 +23,6 @@ sudo rm -r yay;
 #Install apps from AUR
 yay -S orage;
 yay -S ttf-fira-code;
-yay -S blesh;
 yay -S escrotum-git;
 
 #Change Grub timeout to 0
@@ -102,9 +101,6 @@ if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 logout
 fi' > ~/.bash_profile;
 
-#Apply Nvchad to Neovim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
-
 #Create config folders
 cd $HOME/.config;
 sudo mkdir -p wallpapers;
@@ -160,8 +156,7 @@ cd $HOME/.config/nvim/lua/custom/themes;
 sudo wget -O catppuccin-mocha.lua https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua;
 cd $HOME;
 sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
-sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.bashrc;
-
+sudo chmod -R 777 $HOME/.config;
 
 #Run postinstall.sh
 wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh;
