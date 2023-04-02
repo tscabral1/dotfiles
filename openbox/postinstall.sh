@@ -22,6 +22,17 @@ Type=simple
 ExecStart=
 ExecStart=-/sbin/agetty --autologin thiago --noclear %I 38400 linux' > /etc/systemd/system/getty@tty1.service.d/override.conf;
 
+#Install trackpad gestures
+cd;
+git clone https://github.com/bulletmark/libinput-gestures.git;
+cd libinput-gestures;
+sudo ./libinput-gestures-setup install;
+cd;
+sudo rm -r libinput-gestures;
+sudo gpasswd -a $USER input;
+newgrp input;
+libinput-gestures-setup desktop autostart start status;
+
 #Install theme
 cd /usr/share/themes;
 sudo wget https://github.com/tscabral1/dotfiles/releases/download/catppuccin-theme-openbox/catppuccin-theme.tar.gz;
@@ -32,15 +43,4 @@ sudo rm -r catppuccin-theme.tar.gz;
 cd /usr/share/icons;
 sudo wget https://github.com/tscabral1/dotfiles/releases/download/catppuccin-papirus-icons-openbox/catppuccin-papirus-icons.tar.gz;
 sudo tar -xzvf catppuccin-papirus-icons.tar.gz;
-sudo rm -r catppuccin-papirus-icons.tar.gz;
-
-#Install trackpad gestures
-cd &&
-git clone https://github.com/bulletmark/libinput-gestures.git &&
-cd libinput-gestures &&
-sudo ./libinput-gestures-setup install &&
-cd &&
-sudo rm -r libinput-gestures &&
-sudo gpasswd -a $USER input &&
-newgrp input &&
-libinput-gestures-setup desktop autostart start status
+sudo rm -r catppuccin-papirus-icons.tar.gz
