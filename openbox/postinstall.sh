@@ -43,4 +43,4 @@ cd &&
 sudo rm -r libinput-gestures &&
 sudo gpasswd -a $USER input &&
 newgrp input &&
-libinput-gestures-setup desktop autostart start status
+libinput-gestures-setup desktop autostart start status &&
