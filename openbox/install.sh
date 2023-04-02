@@ -164,5 +164,5 @@ sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/o
 
 
 #Run postinstall.sh
-sudo wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh;
+wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall.sh;
 sudo bash postinstall.sh
