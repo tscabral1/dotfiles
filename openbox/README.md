@@ -5,6 +5,7 @@
 3. wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/install.sh
 4. bash install.sh
 5. Reboot
+6. yay -s ttf-firacode-nerd
 
 ## Firefox theme
 
