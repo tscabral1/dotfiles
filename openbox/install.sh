@@ -86,7 +86,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-exec openbox-session' > ~/.xinitrc;
+exec openbox-session' > ~/.xinitrc &&
 
 
 #Startx automatically
@@ -100,10 +100,10 @@ echo '#
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 . startx
 logout
-fi' > ~/.bash_profile;
+fi' > ~/.bash_profile &&
 
 #Apply Nvchad to Neovim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim &&
 
 #Create config folders
 cd $HOME/.config &&
