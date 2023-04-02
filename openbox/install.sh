@@ -158,6 +158,7 @@ sudo wget -O rc.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/r
 sudo wget -O rifle.conf https://raw.githubusercontent.com/tscabral1/dotfiles/main/ranger/rifle.conf;
 cd $HOME;
 sudo wget -O .gtkrc-2.0 https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.gtkrc-2.0;
+sudo wget -O .bashrc https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/.bashrc;
 sudo chmod -R 777 $HOME/.config;
 
 #Run postinstall.sh
