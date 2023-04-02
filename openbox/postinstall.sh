@@ -43,7 +43,4 @@ cd &&
 sudo rm -r libinput-gestures &&
 sudo gpasswd -a $USER input &&
 newgrp input &&
-libinput-gestures-setup desktop autostart start status &&
-
-#Apply Nvchad to Neovim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+libinput-gestures-setup desktop autostart start status
