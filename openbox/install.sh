@@ -22,7 +22,7 @@ sudo rm -r yay;
 
 #Install apps from AUR
 yay -S orage;
-yay -S ttf-fira-code;
+yay -S ttf-jetbrains-mono;
 yay -S escrotum-git;
 
 #Change Grub timeout to 0
