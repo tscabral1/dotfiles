@@ -34,7 +34,9 @@ sudo sed -i 's/#AutoEnable=true/AutoEnable=true/g' /etc/bluetooth/main.conf;
 sudo systemctl enable bluetooth.service;
 
 #Reconfigure Openbox menu
-cd $HOME/.config/openbox &&
+cd $HOME/.config/ &&
+sudo mkdir -p openbox &&
+cd $HOME/.config/Openbox/ &&
 sudo touch menu.xml &&
 sudo chmod 777 menu.xml &&
 cd &&
@@ -110,7 +112,6 @@ cd $HOME/.config;
 sudo mkdir -p wallpapers;
 sudo mkdir -p tint2/executors/icons/;
 sudo mkdir -p orage;
-sudo mkdir -p openbox;
 sudo mkdir -p gtk-3.0;
 sudo mkdir -p gtk-2.0;
 sudo mkdir -p kitty;
