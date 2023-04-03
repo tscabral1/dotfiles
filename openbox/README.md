@@ -26,8 +26,11 @@ https://addons.mozilla.org/firefox/downloads/file/4088983/40d0f4ca6aa84191b226-5
 ```
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 ```
-3. sudo mkdir ~/.config/nvim/lua/custom/themes
-4. cd ~/.config/nvim/lua/custom/themes
-5. sudo wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua
+2. Install Catppuccin Mocha theme
+```
+sudo mkdir ~/.config/nvim/lua/custom/themes
+cd ~/.config/nvim/lua/custom/themes
+sudo wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua
+```
 
 To change theme: leader key + th
