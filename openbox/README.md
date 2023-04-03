@@ -21,6 +21,9 @@ Log into: https://addons.mozilla.org
 Download:
 https://addons.mozilla.org/firefox/downloads/file/4088983/40d0f4ca6aa84191b226-5.0.xpi
 
+Dark Reader (extension) theme:
+https://github.com/catppuccin/dark-reader
+
 ## Apply Nvchad to Neovim
 1. Clone repo
 ```
