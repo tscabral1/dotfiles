@@ -7,6 +7,11 @@
 5. Reboot
 6. yay -s ttf-firacode-nerd
 
+```
+wget -O - https://raw.githubusercontent.com/tscabral1/dotfiles/main/openbox/postinstall2.sh | bash
+
+```
+
 ## Firefox theme
 
 Log into: https://addons.mozilla.org
