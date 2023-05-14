@@ -334,7 +334,7 @@
         <command>shutdown now</command>
       </action>
     </keybind>
-    <keybind key="A-F5">
+    <keybind key="A-F7">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
