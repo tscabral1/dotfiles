@@ -15,4 +15,5 @@ PS1="\e[01;37m\]\w \e[01;34m\]  \e[00;37m\] "
 
 alias sv='sudo vim'
 alias sp='sudo pacman -S'
+alias n='nvim'
 
