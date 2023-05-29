@@ -38,7 +38,7 @@ sudo wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/cus
 
 3. To change theme: leader key + th
 
-To install auto save plugin:
+To add auto-save plugin to Nvchad:
 - Paste right after "local plugins = {" in /nvim/lua/custom/plugins.lua :
 ```
 {"Pocco81/auto-save.nvim", lazy = false },
