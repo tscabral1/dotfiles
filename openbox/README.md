@@ -47,3 +47,4 @@ To install auto save plugin:
 ```
 "InsertCharPre"
 ``` 
+- Close and reopen Neovim
