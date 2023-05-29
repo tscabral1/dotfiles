@@ -43,3 +43,7 @@ To install auto save plugin:
 ```
 {"Pocco81/auto-save.nvim", lazy = false },
 ``` 
+- Add to trigger_events in $HOME/.local/share/nvim/lazy/auto-save.nvim/lua/auto-save/config.lua:
+```
+"InsertCharPre"
+``` 
