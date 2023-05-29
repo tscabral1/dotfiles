@@ -36,4 +36,10 @@ cd ~/.config/nvim/lua/custom/themes
 sudo wget https://raw.githubusercontent.com/tscabral1/dotfiles/main/nvim/lua/custom/themes/catppuccin-mocha.lua
 ```
 
-To change theme: leader key + th
+3. To change theme: leader key + th
+
+To install auto save plugin:
+- Paste right after "local plugins = {" in /nvim/lua/custom/plugins.lua :
+```
+{"Pocco81/auto-save.nvim", lazy = false },
+``` 
