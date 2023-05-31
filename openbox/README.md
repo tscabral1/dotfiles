@@ -48,3 +48,30 @@ To add auto-save plugin to Nvchad:
 "InsertCharPre"
 ``` 
 - Close and reopen Neovim
+
+To add ts and tsx autotag/autocomplete to Nvchad:
+- Install emmet-ls
+```
+sudo npm install -g emmet-ls
+```
+- Add to $HOME/.config/nvim/lua/custom/configs/lspconfig.lua
+```
+local lspconfig = require('lspconfig')
+local configs = require('lspconfig/configs')
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.emmet_ls.setup({
+    -- on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "css", "eruby", "html", "markdown", "javascript", "javascriptreact", "typescriptreact", "typescript", "tsx", "ts", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+    init_options = {
+      html = {
+        options = {
+          -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+          ["bem.enabled"] = true,
+        },
+      },
+    }
+})
+```
